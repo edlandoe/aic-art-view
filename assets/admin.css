@@ -1,0 +1,84 @@
+
+.artwork-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  gap: 1rem;
+}
+
+.artwork-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  color: black;
+}
+
+.artwork-card:hover {
+  cursor: pointer;
+  transition: all 0.2s; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.artwork-card.selected {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: black;
+  color: white;
+}
+
+.artwork-card .artwork-radio {
+  display: none;
+}
+
+.artwork-thumbnail {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.artwork-title {
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+
+
+.query-input {
+  display: flex;
+  width: 100%;
+}
+
+.query-input input {
+  width: 15rem;
+}
+
+.query-input button {
+  width: 8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .artwork-container {
+    grid-template-columns: repeat(4, 250px);
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .artwork-container {
+    grid-template-columns: repeat(3, 250px);
+
+  }
+}
+
+@media (max-width: 768px) {
+  .artwork-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .artwork-thumbnail {
+    width: 100%;
+  }
+}
