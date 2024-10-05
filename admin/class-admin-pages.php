@@ -1,6 +1,6 @@
 <?php
 if (! defined('ABSPATH')) {
-  exit; // Exit if accessed directly
+  exit;
 }
 
 require_once plugin_dir_path(__FILE__) . '../includes/api-functions.php';
@@ -16,7 +16,7 @@ class AIC_Admin_Pages {
     wp_enqueue_script('aic-admin-script', plugin_dir_url(__FILE__) . '../assets/admin.js', array());
   }
 
-  function aic_options_page_HTML() { // check user capabilities
+  function aic_options_page_HTML() {
     $aic_api = new Aic_Api();
     $search_query = '';
 
@@ -41,7 +41,6 @@ class AIC_Admin_Pages {
         $image_path = $upload_dir['path'] . '/' . $sanitized_title . '.jpg';
         file_put_contents($image_path, $image_data);
 
-        // Save the image to the media library
         if (file_exists($image_path)) {
           $attachment = array(
             'guid'           => $upload_dir['url'] . '/' . $image_name,
