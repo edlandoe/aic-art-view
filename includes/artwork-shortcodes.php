@@ -58,5 +58,4 @@ class AICShortcodes {
   }
 }
 
-// Initialize the shortcodes
 new AICShortcodes();
